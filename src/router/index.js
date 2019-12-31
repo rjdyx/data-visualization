@@ -8,6 +8,11 @@ const routes = [
     path: '/',
     name: 'data',
     component: () => import('components/datav/index.vue')
+  },
+  {
+    path: '/map',
+    name: 'map',
+    component: () => import('components/map/index.vue')
   }
 ]
 
