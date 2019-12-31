@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
+  <div id="data-view">
     <dv-full-screen-container>
-      <dv-border-box-1>Welcome to DataV</dv-border-box-1>
     </dv-full-screen-container>
   </div>
 </template>
@@ -12,3 +11,48 @@ export default {
   name: 'home'
 }
 </script>
+
+<style lang="less">
+#data-view {
+  width: 100%;
+  height: 100%;
+  background-color: #030409;
+  color: #fff;
+
+  #dv-full-screen-container {
+    background-image: url('/img/bg.837e99ea.png');
+    background-size: 100% 100%;
+    box-shadow: 0 0 3px blue;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .block-left-right-content {
+    flex: 1;
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .block-top-bottom-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+
+  .block-top-content {
+    height: 55%;
+    display: flex;
+    flex-grow: 0;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+  }
+}
+</style>
