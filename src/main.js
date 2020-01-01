@@ -2,14 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import echarts from 'echarts'
 import { borderBox1, fullScreenContainer, charts, digitalFlop, decoration10, scrollRankingBoard, scrollBoard, decoration8, decoration5, waterLevelPond } from '@jiaminghi/data-view'
 
 import './assets/common.less'
-
-// 引入 ECharts 主模块
-let echarts = require('echarts/lib/echarts')
-// 引入地图
-require('echarts/lib/chart/map')
 
 Vue.use(borderBox1)
   .use(fullScreenContainer)

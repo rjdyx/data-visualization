@@ -16,7 +16,8 @@ module.exports = {
       'vue': 'Vue',
       'vue-router': 'VueRouter',
       'vuex': 'Vuex',
-      'echarts': 'echarts'
+      'echarts': 'echarts',
+      'element-ui': 'elementUI'
     },
     resolve: {
       // 路径别名
@@ -25,7 +26,8 @@ module.exports = {
         'vue$': 'vue/dist/vue',
         'public': path.resolve(__dirname, './public'),
         'components': path.resolve(__dirname, './src/components'),
-        'utils': path.resolve(__dirname, './src/utils')
+        'utils': path.resolve(__dirname, './src/utils'),
+        'node_modules': path.resolve(__dirname, './node_modules')
       }
     }
   }
