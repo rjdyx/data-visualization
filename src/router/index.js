@@ -6,13 +6,18 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    name: 'home',
+    component: () => import('@src/views/Home.vue')
+  },
+  {
+    path: '/data',
     name: 'data',
-    component: () => import('components/datav/index.vue')
+    component: () => import('@components/datav/index.vue')
   },
   {
     path: '/map',
     name: 'map',
-    component: () => import('components/map/index.vue')
+    component: () => import('@components/map/index.vue')
   }
 ]
 

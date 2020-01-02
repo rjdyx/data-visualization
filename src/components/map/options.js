@@ -164,14 +164,14 @@ let convertData = (data) => {
   return res
 }
 let series = []
-let tmpArr = [['北京市', chinaDatas]]
+let tmpArr = [['上海', chinaDatas]]
 tmpArr.forEach(function (item, i) {
   console.log(item)
   series.push({
     type: 'lines',
     zlevel: 2,
     effect: {
-      show: true,
+      show: false,
       period: 4, // 箭头指向速度，值越小速度越快
       trailLength: 0.02, // 特效尾迹长度[0,1]值越大，尾迹越长重
       symbol: 'arrow', // 箭头图标
@@ -180,7 +180,7 @@ tmpArr.forEach(function (item, i) {
     lineStyle: {
       normal: {
         width: 1, // 尾迹线条宽度
-        opacity: 1, // 尾迹线条透明度
+        opacity: 0, // 尾迹线条透明度
         curveness: 0.3 // 尾迹线条曲直度
       }
     },
@@ -254,37 +254,37 @@ tmpArr.forEach(function (item, i) {
     symbol: 'pin',
     symbolSize: 50,
     data: [{
-      name: item[0],
+      name: '',
       value: chinaGeoCoordMap[item[0]].concat([10])
     }]
   })
 })
 
 export default {
-  tooltip: {
-    trigger: 'item',
-    backgroundColor: 'rgba(166, 200, 76, 0.82)',
-    borderColor: '#FFFFCC',
-    showDelay: 0,
-    hideDelay: 0,
-    enterable: true,
-    transitionDuration: 0,
-    extraCssText: 'z-index:100',
-    formatter (params, ticket, callback) {
-      // 根据业务自己拓展要显示的内容
-      let res = ''
-      let name = params.name
-      let value = params.value[params.seriesIndex + 1]
-      res = `<span style='color:#fff'>${name}</span><br/>数据：` + value
-      return res
-    }
-  },
-  backgroundColor: '#013954',
+  // tooltip: {
+  //   trigger: 'item',
+  //   backgroundColor: 'rgba(166, 200, 76, 0.82)',
+  //   borderColor: '#FFFFCC',
+  //   showDelay: 0,
+  //   hideDelay: 0,
+  //   enterable: true,
+  //   transitionDuration: 0,
+  //   extraCssText: 'z-index:100',
+  //   formatter (params, ticket, callback) {
+  //     // 根据业务自己拓展要显示的内容
+  //     let res = ''
+  //     let name = params.name
+  //     let value = params.value[params.seriesIndex + 1]
+  //     res = `<span style='color:#fff'>${name}</span><br/>数据：` + value
+  //     return res
+  //   }
+  // },
+  backgroundColor: 'transparent',
   visualMap: { // 图例值控制
     min: 0,
     max: 1,
     calculable: true,
-    show: true,
+    show: false,
     color: ['#f44336', '#fc9700', '#ffde00', '#ffde00', '#00eaff'],
     textStyle: {
       color: '#fff'
@@ -292,7 +292,7 @@ export default {
   },
   geo: {
     map: 'china',
-    zoom: 1.2,
+    zoom: 0.9,
     label: {
       emphasis: {
         show: false

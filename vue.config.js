@@ -24,10 +24,11 @@ module.exports = {
       alias: {
         'projectRoot': projectRoot,
         'vue$': 'vue/dist/vue',
-        'public': path.resolve(__dirname, './public'),
-        'components': path.resolve(__dirname, './src/components'),
-        'utils': path.resolve(__dirname, './src/utils'),
-        'node_modules': path.resolve(__dirname, './node_modules')
+        '@public': path.resolve(__dirname, './public'),
+        '@components': path.resolve(__dirname, './src/components'),
+        '@utils': path.resolve(__dirname, './src/utils'),
+        '@src': path.resolve(__dirname, './src'),
+        '@node_modules': path.resolve(__dirname, './node_modules')
       }
     }
   }

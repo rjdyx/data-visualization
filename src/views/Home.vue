@@ -1,14 +1,20 @@
 <template>
   <div id="data-view">
     <dv-full-screen-container>
+      <map-china></map-china>
     </dv-full-screen-container>
   </div>
 </template>
 
 <script>
 
+import mapChina from '@components/map/index'
+
 export default {
-  name: 'home'
+  name: 'home',
+  components: {
+    mapChina
+  }
 }
 </script>
 
@@ -20,7 +26,7 @@ export default {
   color: #fff;
 
   #dv-full-screen-container {
-    background-image: url('/img/bg.837e99ea.png');
+    background-image: url('../assets/img/bg-city.png');
     background-size: 100% 100%;
     box-shadow: 0 0 3px blue;
     display: flex;

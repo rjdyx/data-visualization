@@ -1,13 +1,13 @@
 <template>
   <div id="map">
-    <div id="cusMap" style="width: 100%;height:100%;"></div>
+    <div id="cusMap" style="width: 80%;height:80%;"></div>
   </div>
 </template>
 
 <script>
 
 import option from './options'
-import 'node_modules/echarts/map/js/china.js' // 引入中国地图数据
+import '@node_modules/echarts/map/js/china.js' // 引入中国地图数据
 
 export default {
   name: 'map',
@@ -35,7 +35,7 @@ export default {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    margin: auto;
   }
 }
 </style>
