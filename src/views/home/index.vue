@@ -1,7 +1,22 @@
 <template>
   <div id="data-view">
     <dv-full-screen-container>
+      <top-header></top-header>
       <map-china></map-china>
+      <div class="main-content">
+
+        <div class="block-left-right-content">
+          <ranking-board />
+
+          <div class="block-top-bottom-content">
+            <div class="block-top-content">
+              <scroll-board />
+            </div>
+
+            <cards />
+          </div>
+        </div>
+      </div>
     </dv-full-screen-container>
   </div>
 </template>
@@ -9,11 +24,19 @@
 <script>
 
 import mapChina from '@components/map/index'
+import topHeader from './topHeader'
+import rankingBoard from './rankingBoard'
+import scrollBoard from './scrollBoard'
+import cards from './cards'
 
 export default {
   name: 'home',
   components: {
-    mapChina
+    mapChina,
+    topHeader,
+    rankingBoard,
+    scrollBoard,
+    cards
   }
 }
 </script>
@@ -26,7 +49,7 @@ export default {
   color: #fff;
 
   #dv-full-screen-container {
-    background-image: url('../assets/img/bg-city.png');
+    background-image: url('../../assets/img/bg-city.png');
     background-size: 100% 100%;
     box-shadow: 0 0 3px blue;
     display: flex;
@@ -42,7 +65,7 @@ export default {
   .block-left-right-content {
     flex: 1;
     display: flex;
-    margin-top: 20px;
+    padding-bottom: 20px;
   }
 
   .block-top-bottom-content {
@@ -54,8 +77,9 @@ export default {
   }
 
   .block-top-content {
-    height: 55%;
+    height: 70%;
     display: flex;
+    flex-direction: row-reverse;
     flex-grow: 0;
     box-sizing: border-box;
     padding-bottom: 20px;

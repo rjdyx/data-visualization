@@ -27,6 +27,7 @@ module.exports = {
         '@public': path.resolve(__dirname, './public'),
         '@components': path.resolve(__dirname, './src/components'),
         '@utils': path.resolve(__dirname, './src/utils'),
+        '@assets': path.resolve(__dirname, './src/assets'),
         '@src': path.resolve(__dirname, './src'),
         '@node_modules': path.resolve(__dirname, './node_modules')
       }
