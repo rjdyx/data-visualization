@@ -3,6 +3,12 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import echarts from 'echarts'
+
+import {
+  Menu,
+  MenuItem
+} from 'element-ui'
+
 import {
   borderBox1,
   borderBox2,
@@ -32,6 +38,7 @@ import {
 
 import './assets/common.less'
 
+// dataV组件
 Vue.use(borderBox1)
   .use(borderBox2)
   .use(borderBox3)
@@ -56,6 +63,10 @@ Vue.use(borderBox1)
   .use(waterLevelPond)
   .use(activeRingChart)
   .use(capsuleChart)
+
+// elementUI组件
+Vue.use(Menu)
+  .use(MenuItem)
 
 Vue.config.productionTip = false
 
