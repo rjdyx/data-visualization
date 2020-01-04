@@ -5,6 +5,11 @@ import store from './store'
 import echarts from 'echarts'
 import {
   borderBox1,
+  borderBox2,
+  borderBox3,
+  borderBox4,
+  borderBox5,
+  borderBox6,
   borderBox7,
   borderBox8,
   borderBox12,
@@ -14,15 +19,25 @@ import {
   decoration10,
   scrollRankingBoard,
   scrollBoard,
-  decoration8,
+  decoration1,
+  decoration2,
+  decoration3,
+  decoration4,
   decoration5,
+  decoration8,
   waterLevelPond,
-  activeRingChart
+  activeRingChart,
+  capsuleChart
 } from '@jiaminghi/data-view'
 
 import './assets/common.less'
 
 Vue.use(borderBox1)
+  .use(borderBox2)
+  .use(borderBox3)
+  .use(borderBox4)
+  .use(borderBox5)
+  .use(borderBox6)
   .use(borderBox7)
   .use(borderBox8)
   .use(borderBox12)
@@ -32,10 +47,15 @@ Vue.use(borderBox1)
   .use(decoration10)
   .use(scrollRankingBoard)
   .use(scrollBoard)
-  .use(decoration8)
+  .use(decoration1)
+  .use(decoration2)
+  .use(decoration3)
+  .use(decoration4)
   .use(decoration5)
+  .use(decoration8)
   .use(waterLevelPond)
   .use(activeRingChart)
+  .use(capsuleChart)
 
 Vue.config.productionTip = false
 

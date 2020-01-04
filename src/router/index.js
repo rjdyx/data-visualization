@@ -10,9 +10,19 @@ const routes = [
     component: () => import('@src/views/home')
   },
   {
-    path: '/data',
-    name: 'data',
-    component: () => import('@components/datav/index.vue')
+    path: '/page1',
+    name: 'page1',
+    component: () => import('@components/page1/index.vue')
+  },
+  {
+    path: '/page2',
+    name: 'page2',
+    component: () => import('@components/page2/index.vue')
+  },
+  {
+    path: '/page3',
+    name: 'page3',
+    component: () => import('@components/page3/index.vue')
   },
   {
     path: '/map',
