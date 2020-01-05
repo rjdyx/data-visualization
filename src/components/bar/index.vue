@@ -1,6 +1,6 @@
 <template>
   <div id="bar">
-    <div id="cusBar" style="width: 80%;height:80%;"></div>
+    <div id="cusBar"></div>
   </div>
 </template>
 
@@ -29,12 +29,11 @@ export default {
 
 <style scoped lang="less">
 #bar {
+  width: 33%;
+
   #cusBar {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -100px;
-    margin: auto;
+    width: 100%;
+    height: 100%;
   }
 }
 </style>

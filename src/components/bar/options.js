@@ -2,19 +2,21 @@ export default {
   backgroundColor: 'transparent',
   tooltip: {},
   xAxis: {
-    data: ['企业', '农专', '个体'],
+    data: ['基地', '物流', '扶贫'],
     axisTick: {
-      show: true
+      show: false
     },
     axisLine: {
-      show: true
+      show: false
     },
     axisLabel: {
       show: true,
       textStyle: {
-        color: '#e54035'
+        color: '#ffffff'
       }
-    }
+    },
+    offset: 45,
+    max: 2
   },
   yAxis: {
     splitLine: {
@@ -30,11 +32,16 @@ export default {
       show: false
     }
   },
+  grid: {
+    height: 120,
+    bottom: '33%',
+    containLabel: true
+  },
   series: [{
     name: '年报上报率3',
     type: 'pictorialBar',
-    symbolSize: [50, 30],
-    symbolOffset: [0, -20],
+    symbolSize: [30, 10],
+    symbolOffset: [0, -5],
     z: 12,
     itemStyle: {
       normal: {
@@ -42,32 +49,32 @@ export default {
       }
     },
     data: [{
-      value: 100,
+      value: 40,
       symbolPosition: 'end'
     }, {
-      value: 50,
+      value: 30,
       symbolPosition: 'end'
     }, {
-      value: 20,
+      value: 10,
       symbolPosition: 'end'
     }]
   }, {
     name: '年报上报率2',
     type: 'pictorialBar',
-    symbolSize: [50, 30],
-    symbolOffset: [0, 20],
+    symbolSize: [30, 10],
+    symbolOffset: [0, 6],
     z: 12,
     itemStyle: {
       normal: {
         color: '#14b1eb'
       }
     },
-    data: [100, 50, 20]
+    data: [40, 30, 10]
   }, {
     name: '年报上报率1',
     type: 'pictorialBar',
-    symbolSize: [100, 60],
-    symbolOffset: [0, 37],
+    symbolSize: [50, 25],
+    symbolOffset: [0, 17],
     z: 11,
     itemStyle: {
       normal: {
@@ -76,12 +83,12 @@ export default {
         borderWidth: 5
       }
     },
-    data: [100, 50, 20]
+    data: [40, 30, 10]
   }, {
     name: '年报上报率',
     type: 'pictorialBar',
-    symbolSize: [150, 85],
-    symbolOffset: [0, 50],
+    symbolSize: [85, 40],
+    symbolOffset: [0, 35],
     z: 10,
     itemStyle: {
       normal: {
@@ -91,7 +98,7 @@ export default {
         borderWidth: 5
       }
     },
-    data: [100, 50, 20]
+    data: [40, 30, 10]
   }, {
     type: 'bar',
     itemStyle: {
@@ -101,8 +108,9 @@ export default {
       }
     },
     silent: true,
-    barWidth: 50,
-    barGap: '-100%', // Make series be overlap
-    data: [100, 50, 20]
+    barWidth: 30,
+    barGap: 1,
+    barCategoryGap: 20,
+    data: [40, 30, 10]
   }]
 }

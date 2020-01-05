@@ -3,7 +3,11 @@
     <div class="bottom-charts-top">
       <my-bar></my-bar>
     </div>
-    <dv-border-box-4 :color="['#0ddffc', '#04466e']" class="bottom-charts-bottom"></dv-border-box-4>
+    <dv-border-box-4 :color="['#0ddffc', '#04466e']" class="bottom-charts-bottom">
+      <div class="cart-item"></div>
+      <div class="cart-item"></div>
+      <div class="cart-item"></div>
+    </dv-border-box-4>
   </div>
 </template>
 
@@ -128,14 +132,23 @@ export default {
   .bottom-charts-top {
     width: 100%;
     flex: 1 1 50px;
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   .bottom-charts-bottom {
     width: 100%;
     flex: 1 1 150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+
+    .border-box-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .cart-item {
+      width: 25%;
+    }
   }
 }
 </style>
