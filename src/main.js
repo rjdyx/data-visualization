@@ -18,6 +18,7 @@ import {
   borderBox6,
   borderBox7,
   borderBox8,
+  borderBox9,
   borderBox12,
   fullScreenContainer,
   charts,
@@ -46,6 +47,7 @@ Vue.use(borderBox1)
   .use(borderBox5)
   .use(borderBox6)
   .use(borderBox7)
+  .use(borderBox9)
   .use(borderBox8)
   .use(borderBox12)
   .use(fullScreenContainer)

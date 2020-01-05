@@ -1,6 +1,6 @@
 <template>
   <div id='app'>
-    <el-menu
+    <!-- <el-menu
       v-show='showMenu'
       default-active='2'
       class='menu-model'
@@ -17,7 +17,7 @@
         <i class='el-icon-setting'></i>
         <span slot='title'>导航三</span>
       </el-menu-item>
-    </el-menu>
+    </el-menu> -->
     <router-view />
   </div>
 </template>
@@ -73,18 +73,18 @@ export default {
   color: #2c3e50;
   height: 100%;
 
-  .menu-model {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 200px;
-    height: 100%;
-    background: black;
-    z-index: 1000;
-  }
+  // .menu-model {
+  //   position: fixed;
+  //   left: 0;
+  //   top: 0;
+  //   width: 200px;
+  //   height: 100%;
+  //   background: black;
+  //   z-index: 1000;
+  // }
 
-  .el-menu {
-    border: 0;
-  }
+  // .el-menu {
+  //   border: 0;
+  // }
 }
 </style>
