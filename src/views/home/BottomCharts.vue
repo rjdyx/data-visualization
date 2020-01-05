@@ -4,9 +4,15 @@
       <my-bar></my-bar>
     </div>
     <dv-border-box-4 :color="['#0ddffc', '#04466e']" class="bottom-charts-bottom">
-      <div class="cart-item"></div>
-      <div class="cart-item"></div>
-      <div class="cart-item"></div>
+      <div class="cart-item">
+        <div id="cusBar1"></div>
+      </div>
+      <div class="cart-item">
+        <div id="cusBar2"></div>
+      </div>
+      <div class="cart-item">
+        <div id="cusBar3"></div>
+      </div>
     </dv-border-box-4>
   </div>
 </template>
