@@ -26,9 +26,7 @@
         </div>
         <div class="block-bottom-content">
           <left-bottom-cmp class="block-bottom-left-cmp"></left-bottom-cmp>
-          <dv-border-box-4 class="block-bottom-right-content">
-            <bottom-charts></bottom-charts>
-          </dv-border-box-4>
+          <bottom-charts></bottom-charts>
         </div>
       </div>
     </dv-full-screen-container>
@@ -37,7 +35,7 @@
 
 <script>
 
-import mapChina from '@components/map/index'
+import mapChina from '@components/map'
 import myBorderBox8 from '@components/borderBox/myBorderBox8'
 import scrollBoard from './scrollBoard'
 import capsuleChart from './capsuleChart'

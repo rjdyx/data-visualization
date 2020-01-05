@@ -1,36 +1,20 @@
 <template>
   <div class="bottom-charts">
-    <div class="bc-chart-item">
-      <div class="bcci-header">赵钱收费站</div>
-      <dv-active-ring-chart :config="config1" />
+    <div class="bottom-charts-top">
+      <my-bar></my-bar>
     </div>
-    <dv-decoration-2 class="decoration-1" :reverse="true" style="width:5px;" />
-
-    <div class="bc-chart-item">
-      <div class="bcci-header">孙李收费站</div>
-      <dv-active-ring-chart :config="config2" />
-    </div>
-
-    <dv-decoration-2 class="decoration-2" :reverse="true" style="width:5px;" />
-
-    <div class="bc-chart-item">
-      <div class="bcci-header">周吴收费站</div>
-      <dv-active-ring-chart :config="config3" />
-    </div>
-
-    <dv-decoration-2 class="decoration-3" :reverse="true" style="width:5px;" />
-
-    <div class="bc-chart-item">
-      <div class="bcci-header">郑王收费站</div>
-      <dv-active-ring-chart :config="config4" />
-    </div>
-
+    <dv-border-box-4 :color="['#0ddffc', '#04466e']" class="bottom-charts-bottom"></dv-border-box-4>
   </div>
 </template>
 
 <script>
+import myBar from '@components/bar'
+
 export default {
   name: 'BottomCharts',
+  components: {
+    myBar
+  },
   data () {
     return {
       config1: {
@@ -135,40 +119,23 @@ export default {
 
 <style scoped lang="less">
 .bottom-charts {
-  width: 100%;
+  width: 75%;
   height: 100%;
   display: flex;
   position: relative;
+  flex-direction: column;
 
-  .bc-chart-item {
-    width: 25%;
-    height: 100%;
-    padding-top: 20px;
-    box-sizing: border-box;
+  .bottom-charts-top {
+    width: 100%;
+    flex: 1 1 50px;
   }
 
-  .bcci-header {
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 20px;
-  }
-
-  .dv-active-ring-chart {
-    height: calc(~"100% - 80px");
-  }
-
-  .label-tag {
-    height: 30px;
-  }
-
-  .active-ring-name {
-    font-size: 18px !important;
-  }
-
-  .decoration-1, .decoration-2, .decoration-3 {
-    display: absolute;
-    left: 0%;
+  .bottom-charts-bottom {
+    width: 100%;
+    flex: 1 1 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 </style>
